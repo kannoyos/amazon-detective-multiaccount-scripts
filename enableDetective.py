@@ -369,7 +369,7 @@ if __name__ == '__main__':
                         new_accounts = create_members(
                             d_client, graph, args.disable_email, members, chunk)
                         print("Sleeping for 5s to allow new members' invitations to propagate.")
-                        time.sleep(5)
+                        time.sleep(15)
                         accept_invitations(args.assume_role, itertools.chain(
                             new_accounts, pending[graph]), graph, region)
                 except NameError as e:
